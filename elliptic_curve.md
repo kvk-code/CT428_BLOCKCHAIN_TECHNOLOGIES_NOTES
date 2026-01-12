@@ -90,10 +90,7 @@ Elliptic curve encryption hides a message by combining it with a secret scalar m
 The receiver performs the following steps:
 
 - Chooses a private key $d$
-- Computes the public key:
-$$
-Q = dP
-$$
+- Computes the public key: $Q = dP$
 
 Here:
 - $d$ is kept secret
@@ -108,19 +105,10 @@ Assume the message is represented as a point $M$ on the curve.
 The sender performs the following steps:
 
 1. Chooses a random integer $k$
-2. Computes:
-$$
-C_1 = kP
-$$
-3. Computes:
-$$
-C_2 = M + kQ
-$$
+2. Computes: $C_1 = kP$
+3. Computes: $C_2 = M + kQ$
 
-The ciphertext is the pair:
-$$
-(C_1,\; C_2)
-$$
+The ciphertext is the pair: $(C_1, C_2)$
 
 ---
 
@@ -179,14 +167,8 @@ Elliptic Curve Diffie–Hellman is used for **secure key exchange**, not direct 
 
 ### Step 3: Shared Secret Computation
 
-- Alice computes:
-$$
-S = aB = abP
-$$
-- Bob computes:
-$$
-S = bA = abP
-$$
+- Alice computes: $S = aB = abP$
+- Bob computes: $S = bA = abP$
 
 Both parties independently obtain the same shared secret without revealing their private keys.
 
